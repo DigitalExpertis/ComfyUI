@@ -1,0 +1,958 @@
+{
+    "last_node_id": 76,
+    "last_link_id": 137,
+    "nodes": [
+        {
+            "id": 57,
+            "type": "UnzipPrompt //Inspire",
+            "pos": {
+                "0": -570,
+                "1": 190,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 297.5238342285156,
+                "1": 66.80924224853516
+            },
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "zipped_prompt",
+                    "type": "ZIPPED_PROMPT",
+                    "link": 103
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "positive",
+                    "type": "STRING",
+                    "links": [
+                        119
+                    ],
+                    "slot_index": 0,
+                    "shape": 3
+                },
+                {
+                    "name": "negative",
+                    "type": "STRING",
+                    "links": [
+                        106
+                    ],
+                    "slot_index": 1,
+                    "shape": 3
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "links": null,
+                    "shape": 3
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "UnzipPrompt //Inspire"
+            },
+            "color": "#223",
+            "bgcolor": "#335"
+        },
+        {
+            "id": 58,
+            "type": "LoadPromptsFromFile //Inspire",
+            "pos": {
+                "0": -580,
+                "1": 40,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 315,
+                "1": 82
+            },
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "text_data_opt",
+                    "type": "STRING",
+                    "link": null,
+                    "widget": {
+                        "name": "text_data_opt"
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "ZIPPED_PROMPT",
+                    "type": "ZIPPED_PROMPT",
+                    "links": [
+                        103
+                    ],
+                    "slot_index": 0,
+                    "shape": 6
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "LoadPromptsFromFile //Inspire"
+            },
+            "widgets_values": [
+                "example\\batch-images-with-replacements.txt",
+                ""
+            ],
+            "color": "#223",
+            "bgcolor": "#335"
+        },
+        {
+            "id": 71,
+            "type": "IPAdapterUnifiedLoader",
+            "pos": {
+                "0": -960,
+                "1": 50,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 315,
+                "1": 78
+            },
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 127
+                },
+                {
+                    "name": "ipadapter",
+                    "type": "IPADAPTER",
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "model",
+                    "type": "MODEL",
+                    "links": [
+                        125
+                    ],
+                    "shape": 3,
+                    "slot_index": 0
+                },
+                {
+                    "name": "ipadapter",
+                    "type": "IPADAPTER",
+                    "links": [
+                        126
+                    ],
+                    "shape": 3,
+                    "slot_index": 1
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "IPAdapterUnifiedLoader"
+            },
+            "widgets_values": [
+                "PLUS FACE (portraits)"
+            ],
+            "color": "#233",
+            "bgcolor": "#355"
+        },
+        {
+            "id": 70,
+            "type": "IPAdapterAdvanced",
+            "pos": {
+                "0": -960,
+                "1": 230,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 315,
+                "1": 278
+            },
+            "flags": {},
+            "order": 10,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 125
+                },
+                {
+                    "name": "ipadapter",
+                    "type": "IPADAPTER",
+                    "link": 126
+                },
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 130
+                },
+                {
+                    "name": "image_negative",
+                    "type": "IMAGE",
+                    "link": null
+                },
+                {
+                    "name": "attn_mask",
+                    "type": "MASK",
+                    "link": null
+                },
+                {
+                    "name": "clip_vision",
+                    "type": "CLIP_VISION",
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "links": [
+                        129
+                    ],
+                    "shape": 3,
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "IPAdapterAdvanced"
+            },
+            "widgets_values": [
+                0.8,
+                "linear",
+                "concat",
+                0,
+                1,
+                "V only"
+            ],
+            "color": "#233",
+            "bgcolor": "#355"
+        },
+        {
+            "id": 74,
+            "type": "ImageBatchMulti",
+            "pos": {
+                "0": -936,
+                "1": 560,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 210,
+                "1": 102
+            },
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image_1",
+                    "type": "IMAGE",
+                    "link": 131
+                },
+                {
+                    "name": "image_2",
+                    "type": "IMAGE",
+                    "link": 132
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "links": [
+                        130
+                    ],
+                    "shape": 3,
+                    "slot_index": 0
+                }
+            ],
+            "properties": {},
+            "widgets_values": [
+                2,
+                null
+            ],
+            "color": "#233",
+            "bgcolor": "#355"
+        },
+        {
+            "id": 75,
+            "type": "LoadImage",
+            "pos": {
+                "0": -1328,
+                "1": 171,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": [
+                251.212648281278,
+                314
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        131
+                    ],
+                    "shape": 3
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null,
+                    "shape": 3
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "LoadImage"
+            },
+            "widgets_values": [
+                "batch-elara-09-02_00031_.png",
+                "image"
+            ]
+        },
+        {
+            "id": 76,
+            "type": "LoadImage",
+            "pos": {
+                "0": -1320,
+                "1": 559,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": [
+                235.69337195649769,
+                314
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        132
+                    ],
+                    "shape": 3,
+                    "slot_index": 0
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null,
+                    "shape": 3
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "LoadImage"
+            },
+            "widgets_values": [
+                "batch-elara-09-02_00032_.png",
+                "image"
+            ]
+        },
+        {
+            "id": 67,
+            "type": "CLIPTextEncode",
+            "pos": {
+                "0": -551,
+                "1": 352,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 247.08187866210938,
+                "1": 66.825927734375
+            },
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 135
+                },
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "link": 119,
+                    "widget": {
+                        "name": "text"
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        133
+                    ],
+                    "slot_index": 0,
+                    "shape": 3
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+                ""
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+        },
+        {
+            "id": 59,
+            "type": "CLIPTextEncode",
+            "pos": {
+                "0": -557,
+                "1": 491,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 252.22080993652344,
+                "1": 67.9283218383789
+            },
+            "flags": {},
+            "order": 9,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 136
+                },
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "link": 106,
+                    "widget": {
+                        "name": "text"
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        134
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+                "photo of el4r4 a 48 years-old woman smiling with blond hair and large breasts, and a fit body shape. sitting on an exercise ball in a gym. She is wearing a black crop top with the words \"PINK\" written in white on the front and black leggings. She has blonde hair styled in loose waves and is holding a phone in her right hand. The gym has wooden flooring and large windows in the background."
+            ],
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 55,
+            "type": "KSampler",
+            "pos": {
+                "0": -116,
+                "1": 71,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 315,
+                "1": 262
+            },
+            "flags": {},
+            "order": 11,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 129
+                },
+                {
+                    "name": "positive",
+                    "type": "CONDITIONING",
+                    "link": 133
+                },
+                {
+                    "name": "negative",
+                    "type": "CONDITIONING",
+                    "link": 134
+                },
+                {
+                    "name": "latent_image",
+                    "type": "LATENT",
+                    "link": 100
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "links": [
+                        101
+                    ],
+                    "slot_index": 0,
+                    "shape": 3
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "KSampler"
+            },
+            "widgets_values": [
+                477094407102894,
+                "randomize",
+                30,
+                3.5,
+                "dpmpp_2m_sde",
+                "karras",
+                1
+            ],
+            "color": "#323",
+            "bgcolor": "#535"
+        },
+        {
+            "id": 5,
+            "type": "EmptyLatentImage",
+            "pos": {
+                "0": -111,
+                "1": 455,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 315,
+                "1": 106
+            },
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "links": [
+                        100
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "EmptyLatentImage"
+            },
+            "widgets_values": [
+                1024,
+                1024,
+                1
+            ],
+            "color": "#323",
+            "bgcolor": "#535"
+        },
+        {
+            "id": 8,
+            "type": "VAEDecode",
+            "pos": {
+                "0": 278,
+                "1": 312,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 210,
+                "1": 46
+            },
+            "flags": {},
+            "order": 12,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "samples",
+                    "type": "LATENT",
+                    "link": 101
+                },
+                {
+                    "name": "vae",
+                    "type": "VAE",
+                    "link": 137
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        108
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "VAEDecode"
+            }
+        },
+        {
+            "id": 69,
+            "type": "CheckpointLoaderSimple",
+            "pos": {
+                "0": -1351,
+                "1": -24,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": [
+                325.7046681812101,
+                132.11837946268884
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "links": [
+                        127
+                    ],
+                    "shape": 3,
+                    "slot_index": 0
+                },
+                {
+                    "name": "CLIP",
+                    "type": "CLIP",
+                    "links": [
+                        135,
+                        136
+                    ],
+                    "shape": 3,
+                    "slot_index": 1
+                },
+                {
+                    "name": "VAE",
+                    "type": "VAE",
+                    "links": [
+                        137
+                    ],
+                    "shape": 3,
+                    "slot_index": 2
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "CheckpointLoaderSimple"
+            },
+            "widgets_values": [
+                "juggernautXL_juggXIByRundiffusion.safetensors"
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 60,
+            "type": "SaveImage",
+            "pos": {
+                "0": 552,
+                "1": 81,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 553.2002563476562,
+                "1": 566.7691650390625
+            },
+            "flags": {},
+            "order": 13,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 108
+                }
+            ],
+            "outputs": [],
+            "properties": {},
+            "widgets_values": [
+                "batch-elara-juggernautXI"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+        }
+    ],
+    "links": [
+        [
+            100,
+            5,
+            0,
+            55,
+            3,
+            "LATENT"
+        ],
+        [
+            101,
+            55,
+            0,
+            8,
+            0,
+            "LATENT"
+        ],
+        [
+            103,
+            58,
+            0,
+            57,
+            0,
+            "ZIPPED_PROMPT"
+        ],
+        [
+            106,
+            57,
+            1,
+            59,
+            1,
+            "STRING"
+        ],
+        [
+            108,
+            8,
+            0,
+            60,
+            0,
+            "IMAGE"
+        ],
+        [
+            119,
+            57,
+            0,
+            67,
+            1,
+            "STRING"
+        ],
+        [
+            125,
+            71,
+            0,
+            70,
+            0,
+            "MODEL"
+        ],
+        [
+            126,
+            71,
+            1,
+            70,
+            1,
+            "IPADAPTER"
+        ],
+        [
+            127,
+            69,
+            0,
+            71,
+            0,
+            "MODEL"
+        ],
+        [
+            129,
+            70,
+            0,
+            55,
+            0,
+            "MODEL"
+        ],
+        [
+            130,
+            74,
+            0,
+            70,
+            2,
+            "IMAGE"
+        ],
+        [
+            131,
+            75,
+            0,
+            74,
+            0,
+            "IMAGE"
+        ],
+        [
+            132,
+            76,
+            0,
+            74,
+            1,
+            "IMAGE"
+        ],
+        [
+            133,
+            67,
+            0,
+            55,
+            1,
+            "CONDITIONING"
+        ],
+        [
+            134,
+            59,
+            0,
+            55,
+            2,
+            "CONDITIONING"
+        ],
+        [
+            135,
+            69,
+            1,
+            67,
+            0,
+            "CLIP"
+        ],
+        [
+            136,
+            69,
+            1,
+            59,
+            0,
+            "CLIP"
+        ],
+        [
+            137,
+            69,
+            2,
+            8,
+            1,
+            "VAE"
+        ]
+    ],
+    "groups": [
+        {
+            "title": "Flux Batch Image Generator",
+            "bounding": [
+                -1388,
+                -157,
+                2592,
+                1088
+            ],
+            "color": "#8AA",
+            "font_size": 24,
+            "locked": false
+        }
+    ],
+    "config": {},
+    "extra": {
+        "ds": {
+            "scale": 0.7247295000000026,
+            "offset": [
+                1828.9589665263984,
+                383.3437945730567
+            ]
+        },
+        "workspace_info": {
+            "id": "eb79db25-5fc8-4fc7-b43e-b8e4a9df0961"
+        }
+    },
+    "version": 0.4
+}

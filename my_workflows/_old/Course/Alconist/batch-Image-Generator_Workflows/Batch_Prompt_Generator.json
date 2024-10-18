@@ -1,0 +1,298 @@
+{
+    "last_node_id": 15,
+    "last_link_id": 13,
+    "nodes": [
+        {
+            "id": 5,
+            "type": "DownloadAndLoadFlorence2Model",
+            "pos": {
+                "0": 733,
+                "1": 212,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 315,
+                "1": 106
+            },
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "lora",
+                    "type": "PEFTLORA",
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "florence2_model",
+                    "type": "FL2MODEL",
+                    "links": [
+                        1
+                    ],
+                    "shape": 3
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "DownloadAndLoadFlorence2Model"
+            },
+            "widgets_values": [
+                "microsoft/Florence-2-base",
+                "fp16",
+                "eager"
+            ]
+        },
+        {
+            "id": 1,
+            "type": "LoadImageListFromDir //Inspire",
+            "pos": {
+                "0": 282,
+                "1": 416,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 315,
+                "1": 170
+            },
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        2
+                    ],
+                    "slot_index": 0,
+                    "shape": 6
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null,
+                    "shape": 6
+                },
+                {
+                    "name": "FILE PATH",
+                    "type": "STRING",
+                    "links": null,
+                    "shape": 6
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "LoadImageListFromDir //Inspire"
+            },
+            "widgets_values": [
+                "X:\\training\\Batch Images",
+                0,
+                0,
+                false
+            ]
+        },
+        {
+            "id": 15,
+            "type": "SaveText",
+            "pos": {
+                "0": 1213,
+                "1": 398,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": [
+                466.1999816894531,
+                202
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "link": 13,
+                    "widget": {
+                        "name": "text"
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "STRING",
+                    "type": "STRING",
+                    "links": null,
+                    "shape": 3
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "SaveText"
+            },
+            "widgets_values": [
+                "",
+                "batch-images-no-replacements.txt",
+                false,
+                "instagram photo of",
+                "young woman",
+                "El4r4",
+                "blurry, NSFW, Naked, Nude,"
+            ]
+        },
+        {
+            "id": 4,
+            "type": "Florence2Run",
+            "pos": {
+                "0": 711,
+                "1": 393,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0
+            },
+            "size": {
+                "0": 400,
+                "1": 352
+            },
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 2
+                },
+                {
+                    "name": "florence2_model",
+                    "type": "FL2MODEL",
+                    "link": 1,
+                    "slot_index": 1
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "links": null,
+                    "shape": 3
+                },
+                {
+                    "name": "mask",
+                    "type": "MASK",
+                    "links": null,
+                    "slot_index": 1,
+                    "shape": 3
+                },
+                {
+                    "name": "caption",
+                    "type": "STRING",
+                    "links": [
+                        13
+                    ],
+                    "slot_index": 2,
+                    "shape": 3
+                },
+                {
+                    "name": "data",
+                    "type": "JSON",
+                    "links": null,
+                    "shape": 3
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "Florence2Run"
+            },
+            "widgets_values": [
+                "",
+                "more_detailed_caption",
+                true,
+                false,
+                1024,
+                3,
+                true,
+                "",
+                152813,
+                "fixed"
+            ]
+        }
+    ],
+    "links": [
+        [
+            1,
+            5,
+            0,
+            4,
+            1,
+            "FL2MODEL"
+        ],
+        [
+            2,
+            1,
+            0,
+            4,
+            0,
+            "IMAGE"
+        ],
+        [
+            13,
+            4,
+            2,
+            15,
+            0,
+            "STRING"
+        ]
+    ],
+    "groups": [
+        {
+            "title": "Batch Prompt Generator",
+            "bounding": [
+                232,
+                82,
+                1510,
+                756
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "locked": false
+        }
+    ],
+    "config": {},
+    "extra": {
+        "ds": {
+            "scale": 1.061076460950002,
+            "offset": [
+                145.59036508081292,
+                39.022251743414614
+            ]
+        },
+        "workspace_info": {
+            "id": "5a0ad89f-34dc-4b60-a7b8-b6a8cfac2905"
+        }
+    },
+    "version": 0.4
+}
