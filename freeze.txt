@@ -108,6 +108,7 @@ oauthlib==3.2.2
 omegaconf==2.3.0
 onnx==1.17.0
 onnxruntime==1.19.2
+onnxruntime-gpu==1.19.2
 openai==1.52.0
 opencv-contrib-python==4.10.0.84
 opencv-python==4.10.0.84
@@ -152,7 +153,7 @@ pyreadline3==3.5.4
 PySocks==1.7.1
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
-python-slugify==8.0.4
+python-slugify==8.0.1
 pytz==2023.4
 pywin32==308
 PyYAML==6.0.2
