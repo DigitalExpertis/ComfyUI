@@ -10,6 +10,7 @@ call pip install -r custom_nodes\ComfyUI-KJNodes\requirements.txt
 call pip install -r custom_nodes\ComfyUI_essentials\requirements.txt
 call pip install -r custom_nodes\ComfyUI-CustomNodes\requirements.txt
 call pip install -r custom_nodes\ComfyUI-Inspire-Pack\requirements.txt
+call pip install -r custom_nodes\ComfyUI_FaceAnalysis\requirements.txt
 
 
 call main.py

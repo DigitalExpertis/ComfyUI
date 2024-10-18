@@ -43,3 +43,6 @@
 [submodule "custom_nodes/ComfyUI-Inspire-Pack"]
 	path = custom_nodes/ComfyUI-Inspire-Pack
 	url = https://github.com/DigitalExpertis/ComfyUI-Inspire-Pack.git
+[submodule "custom_nodes/ComfyUI_FaceAnalysis"]
+	path = custom_nodes/ComfyUI_FaceAnalysis
+	url = https://github.com/DigitalExpertis/ComfyUI_FaceAnalysis.git
