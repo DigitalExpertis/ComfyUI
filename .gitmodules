@@ -7,3 +7,6 @@
 [submodule "custom_nodes/ComfyUI-Crystools"]
 	path = custom_nodes/ComfyUI-Crystools
 	url = https://github.com/DigitalExpertis/ComfyUI-Crystools.git
+[submodule "custom_nodes/comfyui-workspace-manager"]
+	path = custom_nodes/comfyui-workspace-manager
+	url = https://github.com/DigitalExpertis/comfyui-workspace-manager.git
