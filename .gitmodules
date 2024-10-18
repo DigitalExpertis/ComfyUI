@@ -28,3 +28,9 @@
 [submodule "custom_nodes/ComfyUI-KJNodes"]
 	path = custom_nodes/ComfyUI-KJNodes
 	url = https://github.com/DigitalExpertis/ComfyUI-KJNodes.git
+[submodule "custom_nodes/ComfyUI-Lora-Auto-Trigger-Words"]
+	path = custom_nodes/ComfyUI-Lora-Auto-Trigger-Words
+	url = https://github.com/DigitalExpertis/ComfyUI-Lora-Auto-Trigger-Words.git
+[submodule "custom_nodes/ComfyUI_essentials"]
+	path = custom_nodes/ComfyUI_essentials
+	url = https://github.com/DigitalExpertis/ComfyUI_essentials.git
