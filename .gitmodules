@@ -34,3 +34,6 @@
 [submodule "custom_nodes/ComfyUI_essentials"]
 	path = custom_nodes/ComfyUI_essentials
 	url = https://github.com/DigitalExpertis/ComfyUI_essentials.git
+[submodule "custom_nodes/ComfyUI-CustomNodes"]
+	path = custom_nodes/ComfyUI-CustomNodes
+	url = https://github.com/DigitalExpertis/ComfyUI-CustomNodes.git
