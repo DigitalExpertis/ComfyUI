@@ -46,3 +46,6 @@
 [submodule "custom_nodes/ComfyUI_FaceAnalysis"]
 	path = custom_nodes/ComfyUI_FaceAnalysis
 	url = https://github.com/DigitalExpertis/ComfyUI_FaceAnalysis.git
+[submodule "custom_nodes/ComfyUI-FaceChain"]
+	path = custom_nodes/ComfyUI-FaceChain
+	url = https://github.com/DigitalExpertis/ComfyUI-FaceChain.git
