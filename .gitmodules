@@ -13,3 +13,12 @@
 [submodule "custom_nodes/ComfyUI_IPAdapter_plus"]
 	path = custom_nodes/ComfyUI_IPAdapter_plus
 	url = https://github.com/DigitalExpertis/ComfyUI_IPAdapter_plus.git
+[submodule "custom_nodes/comfyui_controlnet_aux"]
+	path = custom_nodes/comfyui_controlnet_aux
+	url = https://github.com/DigitalExpertis/comfyui_controlnet_aux.git
+[submodule "custom_nodes/ComfyUI_UltimateSDUpscale"]
+	path = custom_nodes/ComfyUI_UltimateSDUpscale
+	url = https://github.com/DigitalExpertis/ComfyUI_UltimateSDUpscale.git
+[submodule "custom_nodes/ComfyUI-Florence2"]
+	path = custom_nodes/ComfyUI-Florence2
+	url = https://github.com/DigitalExpertis/ComfyUI-Florence2.git
