@@ -14,6 +14,7 @@ async-timeout==4.0.3
 attrs==24.2.0
 beautifulsoup4==4.12.3
 binaryornot==0.4.4
+cachetools==5.5.0
 certifi==2024.8.30
 cffi==1.17.1
 chardet==5.2.0
@@ -89,7 +90,7 @@ mss==9.0.2
 multidict==6.1.0
 networkx==3.4.1
 numba==0.60.0
-numpy==2.0.2
+numpy==1.26.4
 oauthlib==3.2.2
 omegaconf==2.3.0
 onnxruntime==1.19.2
@@ -186,6 +187,7 @@ vhacdx==0.0.8.post1
 watchdog==4.0.2
 watchfiles==0.24.0
 wcwidth==0.2.13
+webcolors==24.8.0
 webencodings==0.5.1
 websockets==13.1
 wget==3.2

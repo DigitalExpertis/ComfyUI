@@ -9,6 +9,7 @@ call pip install -r custom_nodes\ComfyUI-Florence2\requirements.txt
 call pip install -r custom_nodes\ComfyUI-KJNodes\requirements.txt
 call pip install -r custom_nodes\ComfyUI_essentials\requirements.txt
 call pip install -r custom_nodes\ComfyUI-CustomNodes\requirements.txt
+call pip install -r custom_nodes\ComfyUI-Inspire-Pack\requirements.txt
 
 
 call main.py

@@ -40,3 +40,6 @@
 [submodule "custom_nodes/ComfyUI-Custom-Scripts"]
 	path = custom_nodes/ComfyUI-Custom-Scripts
 	url = https://github.com/DigitalExpertis/ComfyUI-Custom-Scripts.git
+[submodule "custom_nodes/ComfyUI-Inspire-Pack"]
+	path = custom_nodes/ComfyUI-Inspire-Pack
+	url = https://github.com/DigitalExpertis/ComfyUI-Inspire-Pack.git
