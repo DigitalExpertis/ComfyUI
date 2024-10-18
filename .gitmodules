@@ -4,3 +4,6 @@
 [submodule "custom_nodes/rgthree-comfy"]
 	path = custom_nodes/rgthree-comfy
 	url = https://github.com/DigitalExpertis/rgthree-comfy.git
+[submodule "custom_nodes/ComfyUI-Crystools"]
+	path = custom_nodes/ComfyUI-Crystools
+	url = https://github.com/DigitalExpertis/ComfyUI-Crystools.git
